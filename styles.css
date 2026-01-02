@@ -1,0 +1,127 @@
+body {
+  text-align: center;
+  background-color: #89b9eb;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#level-title {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  margin: 5% 0;
+  color: #26241d;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons scale based on screen width */
+.btn {
+  margin: 1.5vw;
+  display: inline-block;
+  height: 18vw;
+  width: 18vw;
+  max-height: 180px;
+  max-width: 180px;
+  border: 5px solid black;
+  border-radius: 20%;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+/* ------------------- Responsive Design ------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .btn {
+    height: 20vw;
+    width: 20vw;
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  #level-title {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+  }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .btn {
+    height: 60vw;
+    width: 60vw;
+    max-height: 160px;
+    max-width: 160px;
+  }
+
+  #level-title {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .btn {
+    height: 65vw;
+    width: 65vw;
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  #level-title {
+    font-size: clamp(0.8rem, 6vw, 1.5rem);
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+  
