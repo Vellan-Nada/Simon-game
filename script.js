@@ -14,6 +14,14 @@ $(document).on("keydown", function () {
     startGame()
 })
 
+$("#level-title").on("click", function () {
+    if (started) {
+        return
+    }
+
+    startGame()
+})
+
 $(".btn").on("click", function () {
     if (!started) {
         return
@@ -83,7 +91,7 @@ function restartGame() {
     level = 0
     titleResetTimeout = setTimeout(function () {
         if (!started) {
-            $("#level-title").text("Press A Key to Start")
+            $("#level-title").text("Press Any Key or Tap to Start")
         }
     }, 1000)
 }
