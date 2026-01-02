@@ -24,6 +24,7 @@ $("#level-title").on("click", function () {
 
 $(".btn").on("click", function () {
     if (!started) {
+        startGame()
         return
     }
 
